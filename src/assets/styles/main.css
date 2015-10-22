@@ -1,0 +1,17 @@
+header         { margin-bottom:50px; }
+h1             { margin-bottom:30px; }
+h1 small       { display:block; }
+
+/* when hiding the thing */
+.ng-hide-add         {
+  -webkit-animation:0.5s lightSpeedOut ease;
+  animation:0.5s lightSpeedOut ease;
+}
+
+/* when showing the thing */
+.ng-hide-remove      {
+  -webkit-animation:0.5s flipInX ease;
+  animation:0.5s flipInX ease;
+}
+
+/* Rest all is imported from animation.css */

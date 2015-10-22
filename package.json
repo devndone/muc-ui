@@ -1,0 +1,29 @@
+{
+  "jspm": {
+    "dependencies": {
+      "angular": "npm:angular@1.4.7",
+      "angular-animate": "npm:angular-animate@1.4.7",
+      "angular-route": "npm:angular-route@1.4.7",
+      "angular-ui-bootstrap": "npm:angular-ui-bootstrap@0.14.2",
+      "gulp": "npm:gulp@3.9.0",
+      "gulp-connect": "npm:gulp-connect@2.2.0",
+      "gulp-sass": "npm:gulp-sass@2.0.4"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-sass": "^2.0.4"
+  },
+  "devDependencies": {
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-sass": "^2.0.4"
+  }
+}

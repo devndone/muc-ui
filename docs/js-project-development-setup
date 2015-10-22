@@ -1,0 +1,33 @@
+1. Installing Node -> https://gist.github.com/isaacs/579814
+1.1. Updating NPM and Node to Stable version ->
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+1.2. Checking latest dist of a package in npm -> npm view node dist-tags
+2. Installing JSPM Globally on the machine -> npm install --global jspm OR npm install jspm -g
+2.1 Installing JSPM to local directory in project -> npm install jspm --save-dev
+2.2. Also popularly called as lock down JSPM for the project. This will make your project to have the present cosnidered version of the jspm and its dependent modules inside it so that can be shipped with it in prod. Also, it'll excludes the project from the vulnerabilities arrive with the frequent updates in global installed JSPM on the machine. So effectively project will be having its own JSPM libraries, inside its own directory, and will be shipped with it while deploying on prod and serving the page in browser.
+3. Create Project -> mkdir muc-ui && cd muc-ui
+4. Setting up JSPM in the project -> jspm install
+4.1. It'll create create a config.js which contains the configuration for your modules, and package.json file for your project. jspm stores your project's dependencies in here, under the jspm key by default. It will download some libraries that jspm needs: SystemJS, the es6-module-loader, Traceur and the Traceur runtime.
+6. To get this running we now need to create an HTML file, and load in a couple of scripts. Create index.html:
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+      System.import('./app');
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+7. If you run the app locally (I recommend the npm module "serve" https://www.npmjs.org/package/serve / https://github.com/tj/serve for this), you should be able to visit index.html and see 'hello world' logged
+8. Installing Dependencies -> jspm install jquery
+8.1. Installing a dependency from npm -> jspm install lodash=npm:lodash
+This gets jspm to install LoDash from npm, but then set up a mapping so we can require it as lodash, rather than the slightly more verbose npm:lodash, which gets tiring to type very quickly
+9. We'll use ES6 Module Loader, to start you can read the link "Using ES6 Modules Today" http://javascriptplayground.com/blog/2014/06/es6-modules-today/ . Remember, SystemJS can deal with modules defined and loaded in using either AMD, CommonJS or ES6 modules. 
+CommonJS Syntax & Usage -> var _ = require('lodash'); console.log(_.VERSION);
+ES6 Syntax & Usage -> import _ from 'lodash'; console.log(_.VERSION);
+10. 
